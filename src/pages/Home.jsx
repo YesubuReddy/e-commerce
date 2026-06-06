@@ -65,7 +65,7 @@ const Home = () => {
       {/* === HERO === */}
       <section className="hero-section" id="hero">
         <div className="hero-bg">
-          <img src={heroBanner} alt="Ruthu Collections Hero" className="hero-bg-img" fetchpriority="high" rel="preload" />
+          <img src={heroBanner} alt="Ruthu Collections Hero" className="hero-bg-img" fetchPriority="high" rel="preload" />
           <div className="hero-overlay" />
         </div>
         <div className="hero-content container">
