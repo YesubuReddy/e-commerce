@@ -1,0 +1,88 @@
+/* =============================================
+   RUTHU COLLECTIONS — CSS Custom Properties
+   ============================================= */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600;700&family=Great+Vibes&display=swap');
+
+:root {
+  /* === BRAND COLORS === */
+  --gold: #C49A45;
+  --gold-light: #DFB967;
+  --gold-dark: #A67D2A;
+  --gold-pale: rgba(196, 154, 69, 0.08);
+  --gold-pale-solid: #F9F4E6;
+  --ivory: #F7F5F0;
+  --ivory-dark: #EAE6DF;
+  --soft-beige: #F2EEE8;
+  --white: #FFFFFF;
+  --charcoal: #1C1914;
+  --charcoal-mid: #2A261F;
+  --charcoal-light: #484339;
+  --charcoal-muted: #787368;
+
+  /* === SEMANTIC === */
+  --bg-primary: #FAF9F6;
+  --bg-secondary: #F4F1EB;
+  --bg-card: #FFFFFF;
+  --text-primary: #1C1914;
+  --text-secondary: #484339;
+  --text-muted: #787368;
+  --border: rgba(196, 154, 69, 0.15);
+  --border-strong: rgba(196, 154, 69, 0.35);
+  --shadow-xs: 0 1px 3px rgba(28, 25, 20, 0.03);
+  --shadow-sm: 0 2px 8px rgba(28, 25, 20, 0.04);
+  --shadow-md: 0 4px 16px rgba(28, 25, 20, 0.06);
+  --shadow-lg: 0 8px 32px rgba(28, 25, 20, 0.08);
+  --shadow-gold: 0 4px 20px rgba(196, 154, 69, 0.15);
+
+  /* === DARK MODE === */
+  --dm-bg: #11100D;
+  --dm-bg2: #181612;
+  --dm-card: #1F1D17;
+  --dm-text: #EFEBE4;
+  --dm-text2: #C49A45;
+  --dm-border: rgba(196, 154, 69, 0.18);
+
+  /* === TYPOGRAPHY === */
+  --font-serif: 'Cormorant Garamond', 'Georgia', serif;
+  --font-sans: 'Outfit', 'Helvetica Neue', sans-serif;
+  --font-script: 'Great Vibes', cursive;
+
+  /* === SPACING === */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+
+  /* === LAYOUT === */
+  --container-max: 1280px;
+  --navbar-h: 68px;
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* === TRANSITIONS === */
+  --transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.15s ease;
+  --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] {
+  --bg-primary: var(--dm-bg);
+  --bg-secondary: var(--dm-bg2);
+  --bg-card: var(--dm-card);
+  --text-primary: var(--dm-text);
+  --text-secondary: #c8b87a;
+  --text-muted: #8a7c52;
+  --border: var(--dm-border);
+  --border-strong: rgba(201, 162, 39, 0.4);
+  --shadow-xs: 0 1px 4px rgba(0,0,0,0.2);
+  --shadow-sm: 0 2px 12px rgba(0,0,0,0.3);
+  --shadow-md: 0 6px 24px rgba(0,0,0,0.4);
+  --shadow-lg: 0 12px 48px rgba(0,0,0,0.5);
+}

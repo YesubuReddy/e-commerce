@@ -1,0 +1,135 @@
+/* =============================================
+   REVIEW CARD + MISC COMPONENTS — Premium
+   ============================================= */
+
+/* === REVIEW CARD === */
+.review-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  box-shadow: var(--shadow-xs);
+  transition: var(--transition);
+  position: relative;
+}
+.review-card::before {
+  content: '\201C';
+  position: absolute; top: 12px; right: 18px;
+  font-family: var(--font-serif); font-size: 64px;
+  color: var(--gold); opacity: 0.08; line-height: 1;
+}
+.review-card:hover { box-shadow: var(--shadow-sm); transform: translateY(-2px); }
+
+.review-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.reviewer-avatar {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: #fff; font-family: var(--font-serif);
+  font-size: 16px; font-weight: 600;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.reviewer-info { flex: 1; }
+.reviewer-name { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+.reviewer-location { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
+.verified-badge {
+  font-size: 9px; font-weight: 700; color: #27ae60;
+  background: rgba(39,174,96,0.08); padding: 2px 7px;
+  border-radius: var(--radius-full); border: 1px solid rgba(39,174,96,0.2);
+}
+
+.review-stars { display: flex; gap: 2px; margin-bottom: 10px; }
+.rstar { font-size: 12px; color: #e0d8c8; }
+.rstar.filled { color: var(--gold); }
+
+.review-text {
+  font-size: 13px; line-height: 1.8; color: var(--text-secondary);
+  font-style: italic; margin-bottom: 12px;
+}
+.review-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 6px; padding-top: 12px; border-top: 1px solid var(--border);
+}
+.review-product { font-size: 11px; color: var(--gold); font-weight: 500; }
+.review-date { font-size: 11px; color: var(--text-muted); }
+
+/* === FLOATING WHATSAPP === */
+.floating-whatsapp {
+  position: fixed; bottom: 82px; right: 20px;
+  z-index: 900; width: 52px; height: 52px;
+  background: #25d366; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+  text-decoration: none; transition: var(--transition);
+}
+.floating-whatsapp:hover {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 6px 28px rgba(37,211,102,0.5);
+}
+
+/* === BACK TO TOP === */
+.back-to-top {
+  position: fixed; bottom: 20px; right: 20px; z-index: 900;
+  width: 44px; height: 44px;
+  background: var(--gold); color: #fff; border: none;
+  border-radius: 50%; font-size: 16px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(201,162,39,0.3);
+  transition: var(--transition);
+  opacity: 0; pointer-events: none; transform: translateY(16px);
+}
+.back-to-top.visible { opacity: 1; pointer-events: all; transform: translateY(0); }
+.back-to-top:hover { background: var(--gold-dark); transform: translateY(-2px); }
+
+/* === TOAST CONTAINER === */
+.toast-container {
+  position: fixed; top: calc(var(--navbar-h) + 12px); right: 12px;
+  z-index: 9999; display: flex; flex-direction: column;
+  gap: 6px; pointer-events: none; max-width: 300px;
+  width: calc(100vw - 24px);
+}
+.toast {
+  display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px;
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  border-left: 3px solid var(--gold);
+  font-size: 13px; font-weight: 500; color: var(--text-primary);
+  animation: toastIn 0.32s ease forwards;
+  pointer-events: all; cursor: pointer;
+}
+.toast-success { border-left-color: #27ae60; }
+.toast-error { border-left-color: #e74c3c; }
+.toast-info { border-left-color: var(--gold); }
+.toast-icon {
+  width: 20px; height: 20px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700; flex-shrink: 0;
+}
+.toast-success .toast-icon { background: rgba(39,174,96,0.1); color: #27ae60; }
+.toast-error .toast-icon { background: rgba(231,76,60,0.1); color: #e74c3c; }
+.toast-info .toast-icon { background: var(--gold-pale); color: var(--gold-dark); }
+
+/* === SKELETON === */
+.skeleton {
+  background: linear-gradient(90deg, var(--soft-beige) 25%, #e8e2d6 50%, var(--soft-beige) 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.4s infinite linear;
+}
+[data-theme="dark"] .skeleton {
+  background: linear-gradient(90deg, #211d10 25%, #2a2516 50%, #211d10 75%);
+  background-size: 800px 100%;
+}
+
+/* === SCROLL REVEAL === */
+.reveal {
+  opacity: 0; transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* === INSTAGRAM GALLERY (misc) === */
+@media (max-width: 480px) {
+  .floating-whatsapp { width: 46px; height: 46px; bottom: 74px; right: 14px; }
+  .back-to-top { width: 40px; height: 40px; bottom: 16px; right: 14px; }
+}
